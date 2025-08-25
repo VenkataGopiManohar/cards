@@ -1,0 +1,77 @@
+body{
+  overflow: hidden;
+}
+/* ========== HEADER STYLES ========== */
+header {
+  height: 50px; /* Fixed height of the header section */
+  line-height: 50px; /* Vertically center text/content by aligning line height with height */
+  background: #2d3748; /* Dark gray-blue background color (Tailwind's gray-800) */
+  color: white; /* Text color set to white for contrast */
+}
+
+/* ========== FOOTER STYLES ========== */
+footer {
+  height: 30px; /* Fixed height of the footer */
+  line-height: 30px; /* Align text vertically centered */
+  background: #2d3748; /* Same dark background color as header for design consistency */
+  color: white; /* Text color set to white */
+  font-size: 8pt; /* Small font size suitable for footer text */
+  text-align: center; /* Center-align the footer text horizontally */
+}
+
+/* ========== MAIN SECTION STYLES ========== */
+section {
+  height: calc(100% - 100px); /* Full height minus header (50px) and footer (30px) + section padding (20px total) */
+  width: calc(100% - 20px); /* Leave 10px padding on both left and right */
+  overflow: auto; /* Enable scrollbars if content exceeds the height */
+  display: grid; /* Use CSS Grid to layout child elements (like .card) */
+  grid-template-columns: 340px 340px 340px 340px; 
+  /* Create responsive grid: as many columns as fit, min width 280px, max 1 fraction of space */
+  gap: 20px; /* Space between the grid items */
+  padding: 10px; /* Padding around the section content */
+}
+
+/* ========== LOGO TEXT STYLING ========== */
+.logo {
+  font-size: 16pt; /* Larger font size for branding/logo emphasis */
+  font-weight: bold; /* Bold font for visual prominence */
+  margin-left: 15px; /* Adds space to the left of the logo */
+}
+
+/* ========== CARD CONTAINER STYLING ========== */
+.card {
+  width: 100%; /* Card takes full width of its grid column */
+  min-height: 250px; /* Ensures a minimum height for visual balance */
+  background: white; /* Card background color set to white */
+  border-radius: 10px; /* Rounded corners for smooth look */
+  overflow: hidden; /* Clips child content that overflows (like images) */
+  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.2); 
+  /* Adds subtle depth using shadow; simulates elevation */
+  cursor: pointer; /* Shows pointer cursor to indicate interactivity */
+  text-align: center; /* Centers all text content horizontally */
+  transition: transform 0.3s ease; 
+  /* Smooth animation when card is hovered or transformed */
+  color: aqua;
+}
+
+/* ========== IMAGE INSIDE CARD ========== */
+.card img {
+  width: 100%; /* Image stretches full width of the card */
+  height: 200px; /* Fixed height to maintain uniformity among cards */
+  display: block; /* Removes default inline spacing below image */
+  cursor: pointer; /* Indicates the image is clickable */
+  object-fit: fill;
+}
+
+/* ========== LABEL INSIDE CARD ========== */
+.card label {
+  display: block; /* Forces label to occupy its own line */
+  padding: 10px; /* Adds spacing around the label text */
+  cursor: pointer; /* Indicates label is interactive (e.g., could trigger action) */
+}
+
+/* ========== HOVER EFFECT FOR CARD ========== */
+.card:hover {
+  transform: translateY(-8px); 
+  /* On hover, card is lifted upward to provide visual feedback */
+}
